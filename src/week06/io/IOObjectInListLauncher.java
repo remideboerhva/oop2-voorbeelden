@@ -1,5 +1,7 @@
 package week06.io;
 
+import week06.User;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;

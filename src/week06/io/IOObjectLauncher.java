@@ -1,5 +1,7 @@
 package week06.io;
 
+import week06.User;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -46,20 +48,3 @@ public class IOObjectLauncher {
     }
 }
 
-class User implements Serializable{
-    private int id;
-    private String naam;
-
-    public User(int id, String naam) {
-        this.id = id;
-        this.naam = naam;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", naam='" + naam + '\'' +
-                '}';
-    }
-}
