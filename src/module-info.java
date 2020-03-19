@@ -7,4 +7,5 @@ module nl.hva.practicumopdracht {
     exports week04.repositoryuitleg;
     exports week04.altswitchcontroller;
     exports week05.io;
+    exports week06.io;
 }
