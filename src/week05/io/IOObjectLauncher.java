@@ -1,6 +1,8 @@
 package week05.io;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class IOObjectLauncher {
 
@@ -26,13 +28,11 @@ public class IOObjectLauncher {
 
         // lezen
         try(FileInputStream fis = new FileInputStream(DATA_OBJ); ObjectInputStream ois = new ObjectInputStream(fis)) {
-
+            List<User> list = new ArrayList<>();
             int nrUsers = ois.readInt();
 
-            System.out.println("Aantal users in file" + nrUsers);
-
             for (int i = 0; i < nrUsers; i++) {
-                System.out.printf("gelezen: [%s] ", ois.readObject()); // leest user, moet we bestaan
+                User user = (User) ois.readObject();// leest user, moet we bestaan
             }
 
         } catch (FileNotFoundException e) {
