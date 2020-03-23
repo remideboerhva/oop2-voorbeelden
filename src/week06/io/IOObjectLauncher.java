@@ -8,7 +8,7 @@ import java.util.List;
 
 public class IOObjectLauncher {
 
-    public static final String DATA_OBJ = "data.obj";
+    public static final String DATA_OBJ = "files/data.obj";
 
     public static void main(String[] args) {
 
@@ -35,7 +35,10 @@ public class IOObjectLauncher {
 
             for (int i = 0; i < nrUsers; i++) {
                 User user = (User) ois.readObject();// leest user, moet we bestaan
+                list.add(user);
             }
+
+            System.out.println(list);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
